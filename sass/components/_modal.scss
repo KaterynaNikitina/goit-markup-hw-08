@@ -1,0 +1,217 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity $transition-duration $function,
+      transform $transition-duration $function;
+  }
+  
+  .backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.3);
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    min-width: 528px;
+    min-height: 581px;
+    border-radius: 4px;
+    padding: 40px;
+  
+    background-color: $primary-white-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  .close-button {
+    position: absolute;
+    
+    @extend %centered-flex;
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  
+    height: 30px;
+    width: 30px;
+    top: 8px;
+    right: 8px;
+    background-color: transparent;
+    transition: fill $transition-duration $function;
+  }
+  .close-button:hover,
+  .close-button:focus {
+    fill: $accent-color;
+  }
+  
+  .form {
+    width: 448px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-title {
+    display: block;
+    font-weight: 700;
+    @include font-params(20px, 1.15);
+    
+    text-align: center;
+    margin-bottom: 12px;
+    color: $title-text-color;
+  }
+  
+  .form-field {
+   
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-label {
+    margin-bottom: 4px;
+    margin-left: 0;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $primary-text-color;
+  }
+  
+  .input-wrap {
+    position: relative;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .form-field input {
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 448px;
+  
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 42px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transition: border-color $transition-duration $function;
+    transition: fill $transition-duration $function;
+    margin-bottom: 10px;
+  }
+  
+  .svg-item {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    transition: fill $transition-duration $function;
+  }
+  
+  .form-field:hover input,
+  .form-field:hover textarea,
+  .form-field:focus-within input,
+  .form-field:focus-within textarea {
+    border-color: $accent-color;
+    outline: $accent-color;
+  }
+  
+  .form-field:hover .svg-item,
+  .form-field:focus-within .svg-item {
+    fill: $accent-color;
+    cursor: pointer;
+  }
+  
+  .textarea {
+    display: block;
+    padding: 12px 16px;
+    width: 448px;
+    height: 120px;
+    resize: none;
+  
+    font-size: 12px;
+    /* line-height: 1.17px; */
+    letter-spacing: 0.01em;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transition: border-color $transition-duration $function;
+  }
+  
+  .form-field textarea::placeholder {
+    
+    @include font-params(12px, 1.17);
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+  
+  /* Кастомный чекбокс */
+  .check-field {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    flex-basis: 448px;
+    margin: 20px 15px 30px;
+  }
+  .icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+  }
+  
+  .checkbox + .icon {
+    width: 16px;
+    height: 15px;
+  
+    background-image: url("../images/img-studio/check-border.svg");
+    background-size: contain;
+    background-origin: border-box;
+    margin-right: 7px;
+  }
+  
+  .checkbox:checked + .icon {
+    border-color: $accent-color;
+    background-color: $accent-color;
+    background-image: url("../images/img-studio/icon-check.svg");
+    background-size: contain;
+    background-origin: border-box;
+    border-radius: 2px;
+    background-position: 50% 50%;
+  }
+  
+  .agreement {
+    color: rgba(33, 150, 243, 1);
+    margin-left: 6px;
+  }
+  
+  .btn-submit {
+    display: inline-block;
+    min-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  
+    background-color: $accent-color;
+    color: $primary-white-color;
+    border: none;
+    padding: 10px 52px;
+    font-weight: 700;
+    
+    @include font-params(16px, 1.87);
+
+    text-align: center;
+    letter-spacing: 0.06em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+  }

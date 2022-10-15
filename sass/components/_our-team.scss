@@ -1,0 +1,66 @@
+.team-section {
+    background-color: $light-grey-background;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  
+  .pref-container {
+    // display: flex;
+
+    &__team-title,
+    &__card-text {
+     
+      @include font-params(16px, 1.19);
+                                                               
+      text-align: center;
+      margin: 0;    
+
+      @media screen and (min-width: 768px) {
+
+        @include font-params(16px, 1.17);      
+    }
+                                                                       
+    &__team-title {
+      color: $title-text-color;
+      font-weight: 500;
+      /* margin-top: 30px; */                                                                                                                                            
+    }
+    
+    &__card-shadow {
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+    }
+    
+    &__card-text {
+      margin-top: 10px;
+    }
+  }
+}
+
+  .team-icons {
+   
+    @extend %centered-flex;
+    gap: 10px;
+    margin-top: 16px;
+
+    &__social-link {
+      display: block;
+      width: 44px;
+      height: 44px;
+      fill: #afb1b8;
+      border: none;
+      border-radius: 50%;
+      padding: 12px;
+    
+      transition: fill $transition-duration $function,
+        background-color $transition-duration $function;
+    }
+    
+    &__social-link:hover,
+    &__social-link:focus {
+      background-color: $accent-color;
+      fill: $primary-white-color;
+    }
+  }
+  

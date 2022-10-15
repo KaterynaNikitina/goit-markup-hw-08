@@ -1,0 +1,25 @@
+  
+  .logo {
+    color: $accent-color;
+    font-family: $logo-font-family;
+    @include font-params(26px, 1.19);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  .logo__pad {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+  .logo-marg {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  .logo__part {
+    color: #000000;
+  }
+  .footer-logo-part {
+    color: $primary-white-color;
+  }
+  

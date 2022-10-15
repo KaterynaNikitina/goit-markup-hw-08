@@ -1,0 +1,92 @@
+
+.hero__overlay {
+   background-color: #c4c4c4;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/img-studio/hero-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+  
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    width: 100%;
+    // margin-bottom: 30px;
+    
+  // @media screen and (min-width: 480px) {
+  //   width: 480px;
+  // }
+
+  // @media screen and (min-width: 768px) {
+  //   width: 768px;
+  // }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  
+}
+
+    
+  .hero__title {
+    
+    color: $primary-white-color;  
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+      
+    @include font-params(26px, 1.62);
+
+    max-width: 360px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 360px;
+    }
+
+    @media screen and (min-width: 1200px) {
+     @include font-params(44px, 1.36); 
+     max-width: 696px;
+    }
+       
+  }
+  
+  .hero__button {
+    display: inline-block;
+    min-width: 200px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 24px;
+  
+    background-color: $accent-color;
+    color: $primary-white-color;
+  
+    font-family: inherit;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+
+    @include font-params(16px, 1.88);
+
+    cursor: pointer;
+    transition: background-color $transition-duration $function;
+
+    @media  screen and (min-width: 1200px)  {
+      min-width: 216px;
+      padding: 10px 32px;
+    }
+  }
+  
+  hero__button:hover,
+  hero__button:focus {
+    background-color: #188ce8;
+  }
