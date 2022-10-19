@@ -136,7 +136,7 @@
                 src="./images/img-studio/box_1.jpg"
                 alt="Напрямок діяльності 1"
                 width="370"
-                class="no-gap"
+                class="team-img"
               />
               <p class="overlay-text">десктопні додатки</p>
             </li>
@@ -146,7 +146,7 @@
                 src="./images/img-studio/box_2.jpg"
                 alt="Напрямок діяльності 2"
                 width="370"
-                class="no-gap"
+                class="team-img"
               />
               <p class="overlay-text">мобільні додатки</p>
             </li>
@@ -156,7 +156,7 @@
                 src="./images/img-studio/box_3.jpg"
                 alt="Напрямок діяльності 3"
                 width="370"
-                class="no-gap"
+                class="team-img"
               />
               <p class="overlay-text">дизайнерські рішення</p>
             </li>
@@ -172,10 +172,18 @@
           <ul class="list pref-container">
             <li class="pref-container__item pref-container__card-shadow">
               <img
-                src="./images/img-studio/igod_dem.jpg"
+              srcset="
+              ./images/img-studio/team/team-1-270.jpg 270w,
+              ./images/img-studio/team/team-1-354.jpg 354w,
+              ./images/img-studio/team/team-1-450.jpg 450w,
+              ./images/img-studio/team/team-1-540.jpg 540w,
+              ./images/img-studio/team/team-1-708.jpg 708w,
+              ./images/img-studio/team/team-1-900.jpg 900w
+            "
+                src="./images/img-studio/team/team-1-270.jpg"
                 alt="Фото Ігора Дем'яненка"
-                width="270"
-                class="no-gap"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                class="team-img"
               />
               <div class="pics-descr">
                 <h3 class="pref-container__team-title">Ігор Дем'яненко</h3>
@@ -210,9 +218,17 @@
             </li>
             <li class="pref-container__item pref-container__card-shadow">
               <img
-                src="./images/img-studio/olga_rep.jpg"
+              srcset="
+              ./images/img-studio/team/team-2-270.jpg 270w,
+              ./images/img-studio/team/team-2-354.jpg 354w,
+              ./images/img-studio/team/team-2-450.jpg 450w,
+              ./images/img-studio/team/team-2-540.jpg 540w,
+              ./images/img-studio/team/team-2-708.jpg 708w,
+              ./images/img-studio/team/team-2-900.jpg 900w
+            "
+                src="./images/img-studio/team/team-2-270.jpg"
                 alt="Фото Ольги Репіної"
-                width="270"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
                 class="no-gap"
               />
               <div class="pics-descr">
@@ -248,9 +264,17 @@
             </li>
             <li class="pref-container__item pref-container__card-shadow">
               <img
-                src="./images/img-studio/mykola_tar.jpg"
+              srcset="
+              ./images/img-studio/team/team-3-270.jpg 270w,
+              ./images/img-studio/team/team-3-354.jpg 354w,
+              ./images/img-studio/team/team-3-450.jpg 450w,
+              ./images/img-studio/team/team-3-540.jpg 540w,
+              ./images/img-studio/team/team-3-708.jpg 708w,
+              ./images/img-studio/team/team-3-900.jpg 900w
+            "
+                src="./images/img-studio/team/team-3-270.jpg"
                 alt="Фото Миколи Тарасова"
-                width="270"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
                 class="no-gap"
               />
               <div class="pics-descr">
@@ -286,9 +310,17 @@
             </li>
             <li class="pref-container__item pref-container__card-shadow">
               <img
-                src="./images/img-studio/myhailo_yer.jpg"
+              srcset="
+              ./images/img-studio/team/team-4-270.jpg 270w,
+              ./images/img-studio/team/team-4-354.jpg 354w,
+              ./images/img-studio/team/team-4-450.jpg 450w,
+              ./images/img-studio/team/team-4-540.jpg 540w,
+              ./images/img-studio/team/team-4-708.jpg 708w,
+              ./images/img-studio/team/team-4-900.jpg 900w
+            "
+                src="./images/img-studio/team/team-4-270.jpg"
                 alt="Фото Михайла Єрмакова"
-                width="270"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
                 class="no-gap"
               />
               <div class="pics-descr">
@@ -371,8 +403,10 @@
       <!-- Footer -->
 
     <footer class="footer-color">
+    
      <div class="container footer-container">   
-      <div>
+      <div class="tablet-flex">
+      <div class="footer-block">
           <a lang="en" href="./index.html" class="logo logo-marg"
             >Web<span class="footer-logo-part">Studio</span></a
           >
@@ -430,19 +464,20 @@
             </li>
           </ul>
         </div>
-    <div class="footer-box">
-      <form>
+    </div>
+  <form class="footer-box">
             
     <p class="footer-box__footform-text">підпишіться на розсилку</p>
-    <input class="footer-box__footform-input" type="email" name="email" placeholder="E-mail">
+    <div class="footer-box__flex"><input class="footer-box__footform-input" type="email" name="email" placeholder="E-mail">
 
-  <div class="footer-box__sent-btn">
+      <div class="footer-box__sent-btn">
     <button class="footer-box__btn-footform" type="submit">Підписатися</button>
     <svg class="footer-box__sent-icon" width="24" height="24"><use href=./images/modal-icons.svg#icon-send></use></svg>
-  </div> 
-
+      </div>
+    </div>
+    
   </form>
-    </div>   
+   
   </div>
 
        

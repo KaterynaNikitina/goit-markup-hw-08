@@ -2,15 +2,26 @@
   .logo {
     color: $accent-color;
     font-family: $logo-font-family;
-    @include font-params(26px, 1.19);
+    @include font-params(26px, 1.17);
     font-weight: 700;
     text-decoration: none;
+
+    @media screen and (max-width: 1199px) {
+      @include font-params(24px, 1.17);
+    }
+    @media screen and (min-width: 1200px) {
+      @include font-params(26px, 1.17);
+    }
   }
   
   .logo__pad {
+       
+    @media screen and (min-width: 1200px) {
     padding-top: 24px;
     padding-bottom: 25px;
   }
+}
+
   .logo-marg {
     display: inline-block;
     margin-bottom: 20px;
