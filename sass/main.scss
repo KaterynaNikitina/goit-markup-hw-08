@@ -2,7 +2,12 @@
 @import "./utils/base";
 @import "./utils/mixins";
 @import "./utils/placeholders";
-@import "./components/header";
+// @import "./components/header";
+
+@import "./components/header-desk";
+@import "./components/header-mobile";
+
+
 @import "./components/logo";
 @import "./components/hero";
 @import "./components/preferences";

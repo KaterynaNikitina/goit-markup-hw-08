@@ -21,11 +21,22 @@
   <body>
     <header class="header-border">
       <div class="container row">
-        <nav class="row">
-          <a lang="en" href="./index.html" class="logo logo-pad"
-          >Web<span class="logo__part">Studio</span></a
+        
+          <a lang="en" href="./index.html" class="logo logo__pad"
+            >Web<span class="logo__part">Studio</span></a
           >
-          <ul class="navigation list">
+        <button 
+          type="button" 
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-label="Перемикач мобільного меню"
+          aria-controls="mobile-menu">
+          <svg class="menu-toggle__icon" width="40px" height="40px">
+          <use href="./images/modal-icons.svg#icon-menu-burger_40px"></use>
+          </svg>
+        </button>
+        <nav class="navigation ">
+          <ul class="list nav-row">
             <li class="navigation__item">
               <a href="./index.html" class="navigation__link link">Студія</a>
             </li>
@@ -39,16 +50,14 @@
         </nav>
         <ul class="list contacts">
           <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="contacts__link link"
-              ><svg class="contacts__icon-envelope">
-                <use href="./images/icons.svg#icon-envelope"></use>
-                </svg>info@devstudio.com</a>
+            
+            <a href="mailto:info@devstudio.com" class="contacts__link link">
+              <svg class="contacts__icon-envelope"><use href="./images/icons.svg#icon-envelope"></use></svg>info@devstudio.com</a>
           </li>
           <li class="contacts__item">
-            <a href="tel:+380961111111" class="contacts__link link"
-              ><svg class="contacts__icon-smartphone">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-                </svg>+38 096 111 11 11</a>
+            <a href="tel:+380961111111" class="contacts__link link">
+              <svg class="contacts__icon-smartphone">
+                <use href="./images/icons.svg#icon-smartphone"></use></svg>+38 096 111 11 11</a>
           </li>
         </ul>
       </div>

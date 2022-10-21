@@ -5,8 +5,7 @@
   }
   
   .pref-container {
-    // display: flex;
-
+    
     &__team-title,
     &__card-text {
      
@@ -16,30 +15,27 @@
       margin: 0;    
 
       @media screen and (min-width: 768px) {
-
-        @include font-params(16px, 1.17);      
+      @include font-params(16px, 1.17);      
+      }
     }
                                                                        
-    &__team-title {
+      &__team-title {
       color: $title-text-color;
       font-weight: 500;
-      /* margin-top: 30px; */                                                                                                                                            
-    }
+                                                                                                                                            
+      }
     
-    &__card-shadow {
+      &__card-shadow{
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
       border-radius: 0px 0px 4px 4px;
-    }
+      }
     
-    &__card-text {
+      &__card-text {
       margin-top: 10px;
-    }
+      }
+    
   }
-}
-// .pref-container .team-img {
-
-// }
 
   .team-icons {
    

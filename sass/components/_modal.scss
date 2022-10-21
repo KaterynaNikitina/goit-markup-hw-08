@@ -9,6 +9,10 @@
     transform: scale(1);
     transition: opacity $transition-duration $function,
       transform $transition-duration $function;
+
+      // @media screen and (max-width: 480px)  {
+        
+      //   padding: 93px 15px;
   }
   
   .backdrop.is-hidden {
@@ -22,16 +26,31 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  
-    min-width: 528px;
-    min-height: 581px;
     border-radius: 4px;
     padding: 40px;
-  
+         
     background-color: $primary-white-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
-  }
+
+      width: 450px;
+    
+
+    // Additional position settings required for scrolling the modal window when the viewport height is less than 610px
+    @media screen and (min-width: 480px) and (min-height: 610px) {
+        // Position
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    
+    @media screen and (min-width: 1200px) {
+            
+        width: 528px;
+    }
+  
+  
+
   .close-button {
     position: absolute;
     
@@ -53,11 +72,16 @@
   }
   
   .form {
-    width: 448px;
+    
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: column;
+    width: 370px;
+
+    @media screen and (min-width: 1200px){
+      width: 448px;
+    }
   }
   
   .form-title {
@@ -95,7 +119,7 @@
     position: relative;
     display: block;
     margin: 0;
-    width: 448px;
+    
   
     padding-top: 11px;
     padding-bottom: 11px;
@@ -105,6 +129,8 @@
     transition: border-color $transition-duration $function;
     transition: fill $transition-duration $function;
     margin-bottom: 10px;
+
+    width: 100%
   }
   
   .svg-item {
@@ -132,7 +158,7 @@
   .textarea {
     display: block;
     padding: 12px 16px;
-    width: 448px;
+    width: 100%;
     height: 120px;
     resize: none;
   
@@ -155,14 +181,22 @@
   .check-field {
     display: flex;
     align-items: center;
-    margin-left: 0;
+    // margin-left: 0;
   }
   
   .checkbox-label {
     display: flex;
     align-items: center;
     flex-basis: 448px;
-    margin: 20px 15px 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 12px;
+    line-height: 1.17;
+
+    @media screen and (min-height: 1200px){
+      font-size: 14px;
+    line-height: 1.71;
+    }
   }
   .icon {
     display: inline-block;
@@ -215,3 +249,4 @@
     border-radius: 4px;
     cursor: pointer;
   }
+}
