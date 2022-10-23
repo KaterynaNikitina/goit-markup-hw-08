@@ -25,9 +25,9 @@
   @media screen and (min-width: 768px) {
    display: flex;
    flex-wrap: wrap;
-  //  margin: -15px;
-  gap: 30px;
-  // width: 480px;
+   justify-content: center;
+   gap: 30px;
+  
 
   
     }
@@ -42,18 +42,16 @@
     
 .pref-container__item {
  
+  max-width: 450px;
   
     @media screen and (min-width: 768px) {
          
-    flex-basis: calc((100% - 60px) / 2);
-    background-color: $primary-white-color;
-    // margin: 15px;
+      max-width: 354px;
   }
 
     @media screen and (min-width: 1200px) {
      
-    flex-basis: calc((100% - 120px) / 4);
-    background-color: $primary-white-color;
+      max-width: 270px;
     
   }
   &:not(:last-child) {
@@ -65,18 +63,24 @@
 
 
 .pref-container__thumb {
-  display: block;
-    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 120px;
     border-radius: 4px;
-    padding: 25px 190px;
+    
     margin-bottom: 30px;
     background-color: $light-grey-background;
+
+    @media screen and (min-width: 480px) {
+      width: 480px;
+    }
 
     @media screen and (min-width: 768px) {
     padding: 25px 142px;
     width: 354px;
     }
+
     @media screen and (min-width: 1200px) {
     padding: 25px 100px;
     width: 270px;
