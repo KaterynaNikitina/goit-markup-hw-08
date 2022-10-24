@@ -373,16 +373,10 @@ img {
 .logo {
   color: #2196f3;
   font-family: "Raleway", sans-serif;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.17;
   font-weight: 700;
   text-decoration: none;
-}
-@media screen and (max-width: 1199px) {
-  .logo {
-    font-size: 24px;
-    line-height: 1.17;
-  }
 }
 @media screen and (min-width: 1200px) {
   .logo {
@@ -632,8 +626,14 @@ img {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .act-container {
@@ -698,9 +698,15 @@ img {
 }
 
 .team-section {
-  background-color: #f5f4fa;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  background-color: #ffffff;
+  padding-top: 60px;
+  padding-bottom: 0;
+}
+@media screen and (min-width: 1200px) {
+  .team-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .pref-container__team-title, .pref-container__card-text {
@@ -807,7 +813,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .footer-color {
-    padding: 60px 0 60px 15px;
+    padding: 60px 0 60px 0;
   }
 }
 
@@ -860,9 +866,14 @@ img {
   text-transform: uppercase;
 }
 
+.icons-position {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
 @media screen and (min-width: 1200px) {
   .icons-position {
-    margin-left: 70px;
+    margin-left: 67px;
     margin-bottom: 0;
     display: block;
   }
@@ -915,7 +926,6 @@ img {
 @media screen and (min-width: 1200px) {
   .footer-box {
     margin-left: 93px;
-    padding-top: 12px;
     display: block;
   }
 }
@@ -964,9 +974,10 @@ img {
     width: 450px;
   }
 }
-@media screen and (min-width: 1200x) {
+@media screen and (min-width: 1200px) {
   .footer-box__footform-input {
     width: 358px;
+    margin-bottom: 0;
   }
 }
 
