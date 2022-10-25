@@ -508,10 +508,12 @@ img {
 
 .pref-section {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .pref-section {
     padding-top: 94px;
+    padding-bottom: 0;
   }
 }
 
