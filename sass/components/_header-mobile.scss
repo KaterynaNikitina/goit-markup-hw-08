@@ -28,18 +28,13 @@ fill: currentColor;
     height: 100vh;
     padding: 48px 40px;
 
-       
+    overflow-y: scroll;
+    
     background-color: white;
 
     transform: translateX(100%);
 
     transition: transform $transition-duration $function;
-    
-
-@media screen and (min-width: 480px) {
-  overflow-y: scroll;  
-}
-    
 }
 
 .menu-container.is-open {
