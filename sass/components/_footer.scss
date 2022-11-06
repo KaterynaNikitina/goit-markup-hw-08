@@ -79,7 +79,12 @@
     font-weight: 700;
     color: $primary-white-color;
     margin-bottom: 20px;
-    text-align: left;
+
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+     text-align: left; 
+    }
+    
   }
   &__footer-icons {
     @extend %centered-flex;

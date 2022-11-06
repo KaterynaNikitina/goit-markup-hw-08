@@ -882,7 +882,12 @@ img {
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 20px;
-  text-align: left;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .icons-position__footer-text {
+    text-align: left;
+  }
 }
 .icons-position__footer-icons {
   gap: 10px;
